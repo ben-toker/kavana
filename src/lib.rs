@@ -22,8 +22,8 @@ use ratatui::{
 
 #[derive(Parser, Debug)]
 #[command(
-    name = "flowst",
-    author = "Ben Toker <btoker.dev>",
+    name = "kavana",
+    author = "Ben Toker <bentoker.com>",
     version = "1.0",
     about = r#"                                                            
                                                               

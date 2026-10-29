@@ -4,13 +4,13 @@ use crossterm::{
     execute,
     terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen},
 };
-use flowst::{parse_args, Action};
-use std::{error::Error, io};
+use kavana::{parse_args, Action};
 use ratatui::{backend::CrosstermBackend, Terminal};
+use std::{error::Error, io};
 
-use flowst::timer;
+use kavana::timer;
 
-use flowst::config::{load_timer, reset_timer, save_timer, TimerInfo};
+use kavana::config::{load_timer, reset_timer, save_timer, TimerInfo};
 
 #[tokio::main(flavor = "current_thread")]
 async fn main() -> Result<(), Box<dyn Error>> {
@@ -67,7 +67,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
             let (rec, cancel) = timer::start_timer().await;
 
-            flowst::run_app(&mut terminal, cancel, rec).await?;
+            kavana::run_app(&mut terminal, cancel, rec).await?;
 
             // restore terminal
             disable_raw_mode()?;
