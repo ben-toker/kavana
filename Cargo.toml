@@ -9,7 +9,7 @@ license = "BSD-3-Clause"
 
 [dependencies]
 clap = {version = "4.3.5", features = ["derive"]}
-tokio = { version = "1", features = ["full"] }
+tokio = { version = "1", features = ["rt", "time", "sync", "macros"] }
 confy = "0.5"
 serde = {version = "1.0.166", features = ["derive"]}
 crossterm = "0.26.1"
