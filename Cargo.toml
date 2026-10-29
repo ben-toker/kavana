@@ -1,5 +1,5 @@
 [package]
-name = "flowst"
+name = "kavana"
 version = "0.1.1"
 edition = "2021"
 description = "A simple pomodoro CLAP and TUI built in Rust."
@@ -27,8 +27,8 @@ toml = "0.5"
 
 [[bin]]
 path = "src/main.rs"
-name = "flowst"
+name = "kavana"
 
 [package.metadata.bundle]
-name = "Flowst"
+name = "Kavana"
 version = "1.0.0"

@@ -1,20 +1,4 @@
-```
-          ,--,                                        ___
-  .--., ,--.'|                                      ,--.'|_
-,--.'  \|  | :     ,---.           .---.            |  | :,'
-|  | /\/:  : '    '   ,'\         /. ./|  .--.--.   :  : ' :
-:  : :  |  ' |   /   /   |     .-'-. ' | /  /    '.;__,'  /
-:  | |-,'  | |  .   ; ,. :    /___/ \: ||  :  /`./|  |   |
-|  : :/||  | :  '   | |: : .-'.. '   ' .|  :  ;_  :__,'| :
-|  |  .''  : |__'   | .; :/___/ \:     ' \  \    `. '  : |__
-'  : '  |  | '.'|   :    |.   \  ' .\     `----.   \|  | '.'|
-|  | |  ;  :    ;\   \  /  \   \   ' \ | /  /`--'  /;  :    ;
-|  : \  |  ,   /  `----'    \   \  |--" '--'.     / |  ,   /
-|  |,'   ---`-'              \   \ |      `--'---'   ---`-'
-`--'                          '---"
-```
-
-# Flowst
+# Kavana (formerly Flowst)
 
 A Pomodoro timer for the terminal, written in Rust. Run it as a full-screen terminal app or as a one-line command. Set your own work and rest intervals, save them as presets, and hear a bell when each interval ends.
 
