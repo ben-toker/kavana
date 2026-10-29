@@ -26,7 +26,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
                 work_duration: Duration::minutes(work),
                 rest_duration: Duration::minutes(rest),
                 start_rest: Some(Utc::now() + Duration::minutes(work)),
-                pause_time: Some(Utc::now()),
+                pause_time: None,
                 run_state: true,
             };
 
