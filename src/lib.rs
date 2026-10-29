@@ -163,8 +163,8 @@ pub async fn run_app(
 
     let mut timer_message = String::from("Please enter timer.");
 
+    let mut run_state = config::load_timer().unwrap().run_state;
     loop {
-        let run_state = config::load_timer().unwrap().run_state;
         match receiver.try_recv() {
             Ok(msg) => {
                 timer_message = String::from(msg);
@@ -189,11 +189,13 @@ pub async fn run_app(
                     // Pause timer
                     timer_info.pause_time = Some(chrono::Utc::now());
                     timer_info.run_state = false;
+                    run_state = false;
                     let _ = config::save_timer(&timer_info);
                     cancel.store(true, Ordering::Relaxed);
                 } else {
                     // Unpause timer
                     timer_info.run_state = true;
+                    run_state = true;
                     let start_work_elapsed =
                         chrono::Utc::now().signed_duration_since(timer_info.start_work.unwrap());
                     if start_work_elapsed.num_seconds() <= timer_info.work_duration.num_seconds() {
