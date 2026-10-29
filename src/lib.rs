@@ -163,7 +163,6 @@ pub async fn run_app(
 
     let mut timer_message = String::from("Please enter timer.");
 
-    let mut run_state = config::load_timer().unwrap().run_state;
     loop {
         match receiver.try_recv() {
             Ok(msg) => {
