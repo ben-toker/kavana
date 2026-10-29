@@ -221,10 +221,10 @@ pub async fn run_app(
             Ok(Message::Enter) => {
                 cancel.store(true, Ordering::Relaxed);
                 receiver.close();
-                let _ = match list_state.selected().unwrap() + 1 {
-                    1 => config::save_cstm(25, 5),
-                    2 => config::save_cstm(50, 10),
-                    3 => config::save_cstm(60, 15),
+                let _ = match list_state.selected().unwrap() {
+                    0 => config::save_cstm(25, 5),
+                    1 => config::save_cstm(50, 10),
+                    2 => config::save_cstm(60, 15),
                     _ => Ok({}),
                 };
                 (receiver, cancel) = timer::start_timer().await;

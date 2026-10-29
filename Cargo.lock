@@ -794,26 +794,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0ce7134b9999ecaf8bcd65542e436736ef32ddca1b3e06094cb6ec5755203b80"
 
 [[package]]
-name = "flowst"
-version = "0.1.1"
-dependencies = [
- "chrono",
- "clap",
- "confy",
- "crossterm 0.26.1",
- "ratatui",
- "reqwest",
- "rodio",
- "serde",
- "serde_json",
- "serde_with",
- "time 0.3.47",
- "tokio",
- "toml",
- "webbrowser",
-]
-
-[[package]]
 name = "fnv"
 version = "1.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1319,6 +1299,26 @@ dependencies = [
  "hashbrown 0.16.1",
  "portable-atomic",
  "thiserror 2.0.18",
+]
+
+[[package]]
+name = "kavana"
+version = "0.1.1"
+dependencies = [
+ "chrono",
+ "clap",
+ "confy",
+ "crossterm 0.26.1",
+ "ratatui",
+ "reqwest",
+ "rodio",
+ "serde",
+ "serde_json",
+ "serde_with",
+ "time 0.3.47",
+ "tokio",
+ "toml",
+ "webbrowser",
 ]
 
 [[package]]
